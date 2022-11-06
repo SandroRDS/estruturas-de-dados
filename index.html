@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Dados</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Estruturas de Dados</h1>
+        <p class="cabecalho__descricao">Conceitos e Exemplos Interativos</p>
+    </header>
+
+    <main class="principal">
+
+        <article class="article pilha">
+            <h2 class="article__titulo">Pilha</h2>
+            <p class="article__descricao">Estrutura caracterizada pela lógica <abbr title="Last In, First Out">LIFO</abbr> ("<i>Last In, First Out</i>" ou "Último a entrar, primeiro a sair", em português). Nesta estrutura, os elementos são armazenados em formato de <b>pilha</b>, onde novos elementos são empilhados um acima do outro e, ao retirar um elemento, é retirado <em>o último elemento da sequência</em>, presente no topo da pilha.</p>
+
+            <div class="article__container">
+                <div class="article__container__figura figura1"></div>
+    
+                <div class="article__container__botoes">
+                    <button class="article__container__adicionar botao_adicionar">+</button>
+                    <button class="article__container__remover botao_remover">-</button>
+                </div>
+                
+                <input type="number" class="article__container__input input_limitador" min="2" max="15" value="10">
+            </div>
+
+            <div class="article__setas">
+                <button class="article__setas__botao left_to_right">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+    
+                <button class="article__setas__botao right_to_left">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+            </div>
+            
+
+            <div class="article__container">
+                <div class="article__container__figura figura2"></div>
+    
+                <div class="article__container__botoes">
+                    <button class="article__container__adicionar botao_adicionar">+</button>
+                    <button class="article__container__remover botao_remover">-</button>
+                </div>
+
+                <input type="number" class="article__container__input input_limitador" min="2" max="15" value="10">
+            </div>
+
+            <p class="log"></p>
+        </article>
+    </main>
+
+    <script src="js/pilha.js"></script>
+</body>
+</html>
