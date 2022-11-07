@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('./styles/header.css');
 @import url('./styles/pilha.css');
+@import url('./styles/fila.css');
 
 :root
 {
@@ -14,9 +15,12 @@
     --salmao: #ff785a;
     --amarelo-esverdeado: yellowgreen;
     --vermelho-escuro: rgb(163, 59, 59);
+    --laranja-medio: #e9ab4f;
+    --laranja-escuro-transparente: #50381578;
 
     --sombra-article: 1px 5px 10px 0px rgba(0, 0, 0, 0.3);
-    --sombra-pilha-figura-blocos: 4px 4px 3px 0px rgba(0, 0, 0, 0.3);
+    --sombra-figura: 4px 4px 3px 0px rgba(0, 0, 0, 0.3);
+    --sombra-figura-2: -4px 4px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
 body
@@ -29,6 +33,10 @@ body
 .principal
 {
     padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .article
@@ -79,6 +87,13 @@ body
 {
     font-weight: 600;
     color: var(--amarelo-esverdeado);
+}
+
+.log
+{
+    color: var(--salmao);
+    line-height: 20px;
+    text-align: justify;
 }
 
 @media screen and (min-width: 1024px) 

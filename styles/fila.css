@@ -1,0 +1,150 @@
+.fila
+{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 5% repeat(3, 1fr) 5%;
+    gap: 20px 10px;
+}
+
+.fila .article__titulo
+{
+    grid-column: span 5;
+}
+
+.fila .article__descricao
+{
+    grid-column: span 5;
+}
+
+.fila .article__figura
+{
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-figura);
+    overflow-x: auto;
+
+    background-color: var(--azul-acinzentado-1);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.fila .article__figura::-webkit-scrollbar-button
+{
+    width: 3px;
+}
+
+.fila .article__figura::-webkit-scrollbar-thumb
+{
+    background-color: var(--azul-medio-transparente);
+    border-radius: 20px;
+}
+
+.fila .bloco
+{
+    flex-shrink: 0;
+    
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--laranja-escuro-transparente);
+    background-color: var(--laranja-medio);
+    box-shadow: var(--sombra-figura-2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fila .article__botao
+{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    transition: all 150ms;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fila .article__botao:active
+{
+    transform: scale(1.2);
+}
+
+.fila .botao_adicionar
+{
+    grid-column: 2;
+    grid-row: 4;
+    justify-self: flex-start;
+
+    background-color: var(--azul-medio-2);
+}
+
+.fila .botao_remover
+{
+    grid-column: 4;
+    grid-row: 4;
+    justify-self: flex-end;
+
+    background-color: var(--salmao);
+}
+
+.fila .article__input
+{
+    grid-column: 3;
+    grid-row: 4;
+
+    text-align: center;
+    border: 3px solid var(--azul-medio-1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.fila .article__input:focus
+{
+    outline: none;
+    border-color: var(--salmao);
+}
+
+.fila .log
+{
+    grid-column: span 5;
+}
+
+@media screen and (min-width: 1024px)
+{
+    .fila
+    {
+        grid-template-columns: 25% repeat(3, 1fr) 25%;    
+    }
+
+    .fila .article__botao
+    {
+        cursor: pointer;
+    }
+
+    .fila .botao_adicionar:hover
+    {
+        color: var(--azul-escuro);
+    }
+
+    .fila .botao_remover:hover
+    {
+        color: var(--vermelho-escuro);
+    }
+
+    .fila .article__input:hover
+    {
+        border-color: var(--salmao);
+    }
+}

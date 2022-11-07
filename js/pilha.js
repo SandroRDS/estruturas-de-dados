@@ -1,7 +1,7 @@
 let contadorDePilhas = 0;
-const log = document.querySelector(".pilha .log");
+const logPilha = document.querySelector(".pilha .log");
 
-const gerarEmojiAleatorio = () => {
+const gerarEmojiAleatorioPilha = () => {
     const emojis = ["&#x1F34A;","&#x1F347;","&#x1F35F;","&#x1F363;","&#x1F368;","&#x1F36A;","&#x1F370;","&#x1F36B;","&#x1F369;","&#x1F34C;","&#x1F33D;","&#x1F32D;","&#x1F355;","&#x1F354;","&#x1F9C1;","&#x1F361;"];
     const numeroMinimo = 0;
     const numeroMaximo = emojis.length;
@@ -22,7 +22,7 @@ class Pilha
         this._botaoRemover = document.querySelector(`.pilha ${seletor} + .article__container__botoes .botao_remover`);
         this._inputMaxItens = document.querySelector(`.pilha ${seletor} ~ .input_limitador`);
 
-        this._botaoAdicionar.onclick = () => this.adicionar(gerarEmojiAleatorio());
+        this._botaoAdicionar.onclick = () => this.adicionar(gerarEmojiAleatorioPilha());
         this._botaoRemover.onclick = () => this.remover();
         this._inputMaxItens.onchange = () => this.atualizarMaxItens();
 
@@ -140,7 +140,7 @@ class Pilha
 
     imprimirMensagemDeLog(mensagem)
     {
-        log.innerHTML = mensagem;
+        logPilha.innerHTML = mensagem;
     }
 }
 

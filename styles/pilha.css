@@ -33,7 +33,7 @@
     padding: 20px 0;
     border-radius: 12px;
     background-color: var(--azul-acinzentado-1);
-    box-shadow: var(--sombra-pilha-figura-blocos);
+    box-shadow: var(--sombra-figura);
     overflow-y: auto;
 
     display: flex;
@@ -51,7 +51,6 @@
 {
     background-color: var(--azul-medio-transparente);
     border-radius: 20px;
-
 }
 
 .pilha .bloco
@@ -62,7 +61,7 @@
     width: 30px;
     border: 1px solid var(--azul-medio-transparente);
     background-color: var(--azul-medio-2);
-    box-shadow: var(--sombra-pilha-figura-blocos);
+    box-shadow: var(--sombra-figura);
 
     display: flex;
     justify-content: center;
@@ -153,12 +152,9 @@
     font-weight: 600;
 }
 
-.log
+.pilha .log
 {
     grid-column: span 3;
-    color: var(--salmao);
-    line-height: 20px;
-    text-align: justify;
 }
 
 @media screen and (min-width: 1024px) 
