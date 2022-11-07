@@ -1,5 +1,5 @@
 let contadorDePilhas = 0;
-const log = document.querySelector(".log");
+const log = document.querySelector(".pilha .log");
 
 const gerarEmojiAleatorio = () => {
     const emojis = ["&#x1F34A;","&#x1F347;","&#x1F35F;","&#x1F363;","&#x1F368;","&#x1F36A;","&#x1F370;","&#x1F36B;","&#x1F369;","&#x1F34C;","&#x1F33D;","&#x1F32D;","&#x1F355;","&#x1F354;","&#x1F9C1;","&#x1F361;"];
@@ -46,7 +46,7 @@ class Pilha
         return this._estrutura.length === 0;
     }
 
-    adicionar(emoji)
+    adicionar(valor)
     {
         if(this.isFull())
         {
@@ -56,7 +56,7 @@ class Pilha
         }
         else
         {
-            this._estrutura.push(emoji);
+            this._estrutura.push(valor);
             this.imprimirMensagemDeLog("");
             this.imprimirPilha();
 
